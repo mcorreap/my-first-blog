@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pagina 1</title>
-  </head>
-  <body>
-    <p>Hola</p>
-    <p>Bienvenidos</p>
+<div>
+  <h1>
+    <a href="/">Django Girls Blog</a>
+  </h1>
+</div>
 
-  </body>
-</html>
+<div>
+  {% for post in posts %}
+  <div>
+    <p> publicado: {{ post.published_date }}</p>
+      <h1>
+        <a href = "">{{ post.title }} </a>
+      </h1>
+    <p>{{ post.text|linebreaksbr }} </p>
+  </div>
+  {% endfor %}
+</div>
